@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net47</TargetFramework>
+    <MSBuildWarningsAsErrors>$(MSBuildWarningsAsErrors);$(RuntimeMSBuildWarningsAsErrors)</MSBuildWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+     <!-- Remove these project references, and the return code from dotnet.exe build will be non-zero. -->
+     <!-- With these present, it logs a failure to the console but reports success and returns 0. -->
+    <ProjectReference Include="..\classlib1\classlib1.csproj" />
+    <ProjectReference Include="..\classlib2\classlib2.csproj" />
+    <ProjectReference Include="..\classlib3\classlib3.csproj" />
+
+    <!-- Intentionally force MSB3245. -->
+    <Reference Include="FooBar.Baz" />
+  </ItemGroup>
+
+</Project>

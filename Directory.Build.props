@@ -1,0 +1,15 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Useful variable for file paths -->
+    <RepoRoot>$(MSBuildThisFileDirectory)</RepoRoot>
+
+    <!-- Add line information to PDB's. See documentation at
+         https://github.com/dotnet/roslyn/blob/master/docs/compilers/CSharp/CommandLine.md -->
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+
+    <RuntimeMSBuildWarningsAsErrors>MSB3277;MSB3836;MSB3245</RuntimeMSBuildWarningsAsErrors>
+  </PropertyGroup>
+
+</Project>
